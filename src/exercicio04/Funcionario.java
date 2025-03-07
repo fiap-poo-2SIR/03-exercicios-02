@@ -1,5 +1,7 @@
 package exercicio04;
 
+import java.text.DecimalFormat;
+
 public class Funcionario {
     // variáveis de instância
     String nome;
@@ -29,5 +31,14 @@ public class Funcionario {
         cargo = novoCargo;
     }
 
+    // método para retornar os dados do objeto para impressão
+    public String getDados() {
+        DecimalFormat formato = new DecimalFormat("0.00");
+        String aux = "";
+        aux += "Nome: " + nome + "\n";
+        aux += "Cargo: " + cargo + "\n";
+        aux += "Salário R$ : " + formato.format(salario) + "\n";
+        return aux;
+    }
 
 }
